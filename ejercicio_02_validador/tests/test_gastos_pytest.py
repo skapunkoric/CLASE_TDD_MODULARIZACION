@@ -1,4 +1,4 @@
-import unittest
+#from app.app import es_gasto_valido
 from app.validador import es_gasto_valido
 
 

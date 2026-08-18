@@ -1,0 +1,12 @@
+Listado de rutas de carpetas
+El número de serie del volumen es 000000D6 1CA3:961B
+C:.
+¦   archive.txt
+¦   main.py
+¦   
++---app
+¦       validador.py
+¦       
++---bd
+        database.py
+        
