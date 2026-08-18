@@ -24,12 +24,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install pytest tabulate
         
-    - name: Correr tests del Ejercicio 02
+    - name: Configurar PYTHONPATH y correr tests
+      env:
+        PYTHONPATH: .
       run: |
-        cd ejercicio_02_validador
-        python -m pytest
-        
-    - name: Correr tests del Ejercicio 07
-      run: |
-        cd ejercicio_07_stock
-        python -m pytest
+        pytest
