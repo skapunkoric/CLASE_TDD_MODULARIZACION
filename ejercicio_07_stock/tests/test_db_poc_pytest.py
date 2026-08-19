@@ -43,8 +43,8 @@ def test_de_stock_bd_completo():
 def test_obtener_cantidades_stock_trae_todos_los_productos():
     "obtiene cantidades de stock y compara "
     resultados = db.obtener_cantidades_stock()
-    assert (len(resultados), 6)
-    assert (resultados[0][1], 5)
+    assert len(resultados) ==  6
+    assert resultados[0][1] == 5
 
 def test_que_muestra_stock_con_numero_de_id():
     "obtiene cantidades con el id de producto"
@@ -54,19 +54,19 @@ def test_que_muestra_stock_con_numero_de_id():
 def test_que_muestra_stock_con_numero_de_cantidad_definido():
     "obtiene cantidades con segun la cantidad que tiene el producto"
     resultado = db.mostrar_stock_con_numero_definido(12)
-    assert (resultado[0][2], 12)
+    assert resultado[0][2] == 12
 
 def test_actualizar_estado_producto_funciona_correctamente():
     "verifica que actualiza el stock de un producto"
     db.actualizar_estado_producto(1,"✅ [STOCK OK]")
     producto_modificado = db.obtener_un_producto(1)
-    assert (producto_modificado[2],"✅ [STOCK OK]")
+    assert producto_modificado[2] == "✅ [STOCK OK]"
 
 def test_actualizar_un_producto_actualiza_correctamente():
     "verifica que actualiza el stock de un producto"
     db.actualizar_producto(2,"",99,"")
     producto_modificado = db.obtener_un_producto(2)
-    assert (producto_modificado[1],99)
+    assert producto_modificado[1] == 99
 
 
 

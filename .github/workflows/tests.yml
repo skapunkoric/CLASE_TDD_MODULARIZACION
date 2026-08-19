@@ -24,13 +24,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install pytest tabulate
         
-    - name: Configurar PYTHONPATH y correr tests
-      env:
-        PYTHONPATH: .
-      run: |
-        pytest
-    - name: Correr los tests con Pytest
-      env:
-          PYTHONPATH: .
-      run: |
-        pytest --import-mode=importlib
+    - name: Correr tests Ejercicio 02
+      working-directory: ./ejercicio_02_validador
+      run: python -m pytest
+      
+    - name: Correr tests Ejercicio 07
+      working-directory: ./ejercicio_07_stock
+      run: python -m pytest
