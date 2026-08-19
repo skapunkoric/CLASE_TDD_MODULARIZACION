@@ -29,3 +29,8 @@ jobs:
         PYTHONPATH: .
       run: |
         pytest
+    - name: Correr los tests con Pytest
+      env:
+          PYTHONPATH: .
+      run: |
+        pytest --import-mode=importlib
