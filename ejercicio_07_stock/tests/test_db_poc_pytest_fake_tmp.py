@@ -38,8 +38,8 @@ def test_de_stock_bd_completo():
 def test_obtener_cantidades_stock_trae_todos_los_productos():
     "obtiene cantidades de stock y compara "
     resultados = db.obtener_cantidades_stock()
-    assert (len(resultados), 6)
-    assert (resultados[0][1], 5)
+    assert len(resultados) == 6
+    assert resultados[0][1] == 5
 
 def test_que_muestra_stock_con_numero_de_id():
     "obtiene cantidades con el id de producto"
