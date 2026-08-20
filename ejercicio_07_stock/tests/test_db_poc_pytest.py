@@ -49,7 +49,7 @@ def test_obtener_cantidades_stock_trae_todos_los_productos():
 def test_que_muestra_stock_con_numero_de_id():
     "obtiene cantidades con el id de producto"
     resultado = db.mostrar_stock_con_numero_de_id(2)
-    assert (resultado[0][2], 0)
+    assert resultado[0][2] == 0
 
 def test_que_muestra_stock_con_numero_de_cantidad_definido():
     "obtiene cantidades con segun la cantidad que tiene el producto"
