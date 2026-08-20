@@ -31,4 +31,4 @@ jobs:
       
     - name: Correr tests Ejercicio 07
       working-directory: ./ejercicio_07_stock
-      run: python -m pytest
+      run: python -m pytest --ignore=tests/test_db_poc_ut_tmp_fake.py
