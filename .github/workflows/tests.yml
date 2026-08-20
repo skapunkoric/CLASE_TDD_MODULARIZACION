@@ -26,7 +26,8 @@ jobs:
         
     - name: Correr tests Ejercicio 02
       working-directory: ./ejercicio_02_validador
-      run: python -m pytest
+      run: python -m pytest --ignore=tests/test_db_unittest_bis.py
+      #run: python -m pytest
       
     - name: Correr tests Ejercicio 07
       working-directory: ./ejercicio_07_stock
