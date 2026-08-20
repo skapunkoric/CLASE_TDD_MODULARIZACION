@@ -19,7 +19,7 @@ class TestBaseDeDatos(unittest.TestCase):
         ruta_falsa = os.path.join(self.directorio_temp.name, "test_gastos.db")
 
         # 3 guardamos la ruta orig por las dudas y pisamos la falsa
-        ruta_falsa = db.DB_NAME
+        self.ruta_original = db.DB_NAME
         db.DB_NAME = ruta_falsa
         
         # 4 creamos la db 
@@ -31,6 +31,7 @@ class TestBaseDeDatos(unittest.TestCase):
         "se ejecuta despues de cada test"
         # cerramos la master, destruyendo la ram
         self.directorio_temp.cleanup()
+        db.DB_NAME = self.ruta_original
     
     def test_ingreso_y_consultas_db(self):
         "prueba que los inserts modifiquen correctamente el dashboard"
