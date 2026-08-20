@@ -35,7 +35,7 @@ def test_la_tabla_gasto_se_crea_correctamente():
     db.crear_base_datos()    
     conexion = db.conectar()
     cursor = conexion.cursor()
-    cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name= gasto")
+    cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name= 'gasto'")
     table_encontrada = cursor.fetchone()
     conexion.close()
     assert table_encontrada is not None    

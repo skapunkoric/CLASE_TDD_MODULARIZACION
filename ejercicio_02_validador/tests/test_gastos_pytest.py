@@ -14,16 +14,16 @@ def test_edge_case_cero():
     
 
 
-def test_negative_path_letras(self):
+def test_negative_path_letras():
     # Comparamos con 'is' para verificar nulos
     
     assert es_gasto_valido("hola") is None
     
 
-def test_negative_path_negative(self):
+def test_negative_path_negative():
     assert es_gasto_valido("-10") is None
     
 
-def test_negative_path_flotante(self):
+def test_negative_path_flotante():
     assert es_gasto_valido("-100.5") is None
     

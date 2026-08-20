@@ -13,7 +13,7 @@ def crear_base_datos():
     conexion = conectar()
     cursor = conexion.cursor()
     cursor.execute("""
-    CREATE TABLE IF NOT EXISTS gasto(
+    CREATE TABLE IF NOT EXISTS gasto (
     id_gasto INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
     monto INTEGER NOT NULL,
     fecha DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL)               

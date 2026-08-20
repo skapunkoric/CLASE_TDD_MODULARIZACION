@@ -1,4 +1,15 @@
 __pycache__/
 *.db
+# Entornos virtuales (¡las librerías no se suben!)
+.venv/
+venv/
+env/
+
+# Caché de Python y Pytest
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Archivos ocultos de tu editor (PyCharm / Visual Studio Code)
 .idea/
 .vscode/
