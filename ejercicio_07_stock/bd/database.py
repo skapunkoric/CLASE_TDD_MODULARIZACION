@@ -38,14 +38,6 @@ def crear_base_datos():
     """)                
     conexion.commit()
     conexion.close()
-
-    conexion = conectar()
-    cursor = conexion.cursor()
-    cursor.execute("SELECT COUNT(*)FROM inventario")
-    cantidad_registros = cursor.fetchone()[0]
-    if cantidad_registros > 0:
-        conexion.close()
-        return 
     productos_a_cargar = [
         ("A", 5),
         ("B", 0),
