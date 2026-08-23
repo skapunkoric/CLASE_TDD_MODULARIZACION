@@ -7,6 +7,7 @@ def db_temporal(tmp_path):
     "crea la ruta y la base temporal"
     ruta_temporal = tmp_path /"test_inventario.db"
     db.DB_NAME = str(ruta_temporal)
+    db.conectar = lambda: sqlite3.connect(db.DB_NAME)
     db.limpiar_historial_viejo()
     db.crear_base_datos()
     yield
