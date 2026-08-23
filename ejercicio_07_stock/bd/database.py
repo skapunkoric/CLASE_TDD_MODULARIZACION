@@ -34,10 +34,8 @@ def crear_base_datos():
         nombre_producto TEXT NOT NULL,
         cantidad INTEGER NOT NULL,
         estado_stock TEXT NULL  
-    )              
-    """)                
-    conexion.commit()
-    conexion.close()
+        )              
+        """)                
     productos_a_cargar = [
         ("A", 5),
         ("B", 0),
@@ -55,6 +53,7 @@ def crear_base_datos():
     
     except sqlite3.IntegrityError:
         pass
+    conexion.commit()
     conexion.close()  
     
 def mostrar_estado_stock_completo():
