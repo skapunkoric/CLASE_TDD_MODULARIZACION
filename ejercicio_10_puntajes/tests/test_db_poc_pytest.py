@@ -1,5 +1,3 @@
-from tkinter.constants import NONE
-
 import pytest
 import sqlite3
 import os
